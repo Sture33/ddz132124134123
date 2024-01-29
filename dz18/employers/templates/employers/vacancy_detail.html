@@ -1,0 +1,14 @@
+{% extends 'employers/base.html' %}
+
+{% block title %}
+	Vacancy Detail
+{% endblock %}
+
+{% block content %}
+<p>Name: {{ vacancy.name }}</p>
+<p>Name of company: {{ vacancy.name_of_company }}</p>
+<p>Salary: {{ vacancy.salary }}</p>
+<p>Required skills: {{ vacancy.required_skills }}</p>
+<p>Responsibilities: {{ vacancy.responsibilities }}</p>
+<p>Address: {{ vacancy.address }}</p>
+{% endblock %}

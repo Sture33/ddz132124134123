@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>{% block title %}
+
+    {% endblock %}</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">Hustler's Haven</div>
+                <div class="navs">
+                    <a href="{% url 'resume_list' %}">Resume list</a>
+                    <a href="{% url 'vacancy_list' %}">Vacancy list</a>
+                    {% if request.user.is_active and not request.user.is_staff %}
+                        <a href="{% url 'resume_create' %}">Create Resume</a>
+                    {% endif %}
+                    {% if request.user.is_staff %}
+                        <a href="{% url 'vacancy_create' %}">Create Vacancy</a>
+                    {% endif %}
+                    <a href="{% url 'logout' %}">Logout</a>
+
+                </div>
+            </div>
+        </div>
+    </header>
+<div class="wrapper">
+<div class="container">
+    {% block content %}
+
+    {% endblock %}
+</div>
+</div>
+</body>
+</html>

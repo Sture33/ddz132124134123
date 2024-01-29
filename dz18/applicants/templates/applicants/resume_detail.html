@@ -1,0 +1,17 @@
+{% extends 'applicants/base.html' %}
+
+{% block title %}
+	Resume List
+{% endblock %}
+
+{% block content %}
+    <p>Name of vacancy: {{ resume.name_of_vacancy }}</p>
+    <p>Name: {{ resume.first_name }}</p>
+    <p>Surname: {{ resume.last_name }}</p>
+    <p>Midle name: {{ resume.middle_name }}</p>
+    <p>Date of birth: {{ resume.date_of_birth }}</p>
+    <p>Email: {{ resume.email }}</p>
+    <p>Skills: {{ resume.skills }}</p>
+    <p>Profession experience: {{ resume.profession_experience }}</p>
+    <p>Education level: {{ resume.education_level }}</p>
+{% endblock %}

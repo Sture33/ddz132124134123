@@ -1,0 +1,14 @@
+{% extends 'employers/base.html' %}
+
+{% block title %}
+	Vacancy Delete
+{% endblock %}
+
+{% block content %}
+    <p>Are you sure?</p>
+    <form method="POST">
+    {% csrf_token %}
+        <input type="submit" value="detele">
+    </form>
+    <a href="{% url 'vacancy_list' %}">NO</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'regi/base.html' %}
+
+{% block title %}
+	Log Out
+{% endblock %}
+
+{% block content %}
+	    <h1>Welcome to my sing up page!</h1>
+<form method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <p><label for="id_is_staff">Are you employer?:</label>
+    <input type="checkbox" id="id_is_staff" name="is_staff"></p>
+    <input type="submit" value="submit">
+</form>
+{% endblock %}

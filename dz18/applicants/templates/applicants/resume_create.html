@@ -1,0 +1,13 @@
+{% extends 'applicants/base.html' %}
+
+{% block title %}
+	Resume Create
+{% endblock %}
+
+{% block content %}
+    <form method="POST">
+    {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="create">
+    </form>
+{% endblock %}

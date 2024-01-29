@@ -1,0 +1,14 @@
+{% extends 'applicants/base.html' %}
+
+{% block title %}
+	Resume Delete
+{% endblock %}
+
+{% block content %}
+    <p>Are you sure?</p>
+    <form method="POST">
+    {% csrf_token %}
+        <input type="submit" value="Yes">
+    </form>
+    <a href="{% url 'resume_list' %}">NO</a>
+{% endblock %}
